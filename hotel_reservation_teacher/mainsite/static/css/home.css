@@ -1,0 +1,83 @@
+body{
+    background-color: #ebe9e9;
+}
+
+.img_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    background-image: url("../img/hotel.jpg");
+}
+.welcome{
+    width: 100%;
+    padding: 30px 0px;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.welcome_title{
+    font-size: 300% ;
+}
+
+.welcome_name{
+    font-size: 500%
+}
+
+.welcome_desc{
+    font-size: 200%;
+}
+
+.room_intro{
+    padding: 50px 0px;
+    text-align: center;
+}
+
+.intro_title{
+    margin: 50px auto;
+}
+
+.rooms_box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+
+.rooms_box img{
+    width: 70%;
+}
+
+.easy_reserve{
+    padding: 100px 50px;
+    text-align: center;
+    background-color: #ffffff;
+}
+.easy_reserve h1{
+    margin-bottom: 40px;
+}
+
+.easy_reserve form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #ffffff;
+    border: 2px solid #D3D3D3;
+}
+
+.easy_reserve form button{
+    padding: 3px 10px;
+    background-color: black;
+    color: #ffffff;
+
+}
+
+.easy_reserve form span{
+    margin: 20px 10px;
+}
+
+.easy_reserve button{
+    margin-top: auto;
+    all: unset;
+}

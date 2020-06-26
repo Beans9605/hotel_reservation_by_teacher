@@ -1,4 +1,61 @@
 {% extends 'layout/layout.html' %}
 {% load static %}
 {% block content1 %}
+<div class="img_box">
+    <div class="welcome">    
+        <div class="welcome_title">WELCOME TO</div>
+        <div class="welcome_name">HOTEL TEACHER</div>
+        <div class="welcome_desc">the best hotel in the world</div>
+    </div>
+</div>
+<div class="room_intro">
+    <div class="intro_title">
+        <h1>HOTEL TEACHER'S ROOM</h1>
+    </div>
+        <div class="rooms_box">
+            <div class="room_infos">
+                <img src="{% static 'img/room1.jpg' %}"/>
+                <div class="room_name"></div>
+                <a href="#" class="check_detail">Check Detail</a>
+            </div>
+            <div class="room_infos">
+                <img src="{% static 'img/room1.jpg' %}"/>
+                <div class="room_name"></div>
+                <a href="#" class="check_detail">Check Detail</a>
+            </div>
+            <div class="room_infos">
+                <img src="{% static 'img/room1.jpg' %}"/>
+                <div class="room_name"></div>
+                <a href="#" class="check_detail">Check Detail</a>
+            </div>
+        </div>
+    
+</div>
+<div class="easy_reserve">
+    <h1>EASY BOOKING</h1>
+    <form class="book_now">
+        <span id="checkin" class ="date_box">
+            <p>Check In</p>
+            <input type="date">
+        </span>
+        <span id="checkout" class ="date_box">
+            <p>Check Out</p>
+            <input type="date">
+        </span>
+        <span id="adult">
+            <p>adult</p>
+            <input type="number">
+        </span>
+        <span id="adult">
+            <p>children</p>
+            <input type="number">
+        </span>
+        <span>
+        <button type="submit">Book now!</button>
+        </span>
+    </form>
+</div>
+<div class="">
+
+</div>
 {% endblock %}
