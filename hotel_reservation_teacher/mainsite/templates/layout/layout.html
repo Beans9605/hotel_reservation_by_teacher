@@ -36,10 +36,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Reservation</a>
-                </li>
                 {% if request.session.user %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'reservation' %}">Reservation</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">mypage</a>
                 </li>
