@@ -19,5 +19,4 @@ class Reservation(models.Model) :
     reservation_request_day = models.DateField(auto_now_add=True)
 
     night_num = models.IntegerField(default=1)
-
     users_num = models.IntegerField(default=2)
