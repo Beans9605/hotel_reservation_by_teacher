@@ -1,6 +1,5 @@
 from django.db import models
-from user_log.models import User
-
+from user.models import CustomUser
 # Create your models here.
 
 class Room(models.Model) :
@@ -11,7 +10,7 @@ class Room(models.Model) :
 
 
 class Reservation(models.Model) :
-    user = models.ForeignKey('User', on_delete=models.CASCADE)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     room = models.ForeignKey('Room', on_delete=models.CASCADE)
     
     reservation_start_day = models.DateField(auto_now=True)
@@ -21,4 +20,4 @@ class Reservation(models.Model) :
 
     night_num = models.IntegerField(default=1)
 
-    users_num = models.IntegerField(defautl=2)
+    users_num = models.IntegerField(default=2)

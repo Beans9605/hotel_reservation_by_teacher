@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL='user.CustomUser'
 
 # Application definition
 
@@ -39,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainsite.apps.MainsiteConfig',
     'reservation.apps.ReservationConfig',
-    'user_log.apps.User_logConfig',
+    'user.apps.UserConfig',
 ]
 
 MIDDLEWARE = [
