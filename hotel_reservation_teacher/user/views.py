@@ -53,3 +53,7 @@ def logout(request) :
         return redirect('home')
     else :
         return redirect('home')
+
+
+def mypage(request):
+    return render(request, 'mypage/mypage.html')

@@ -46,6 +46,14 @@ body{
     height: 500px;
 }
 
+.room_img_grid{
+    width: 100%;
+}
+
+.room_img_grid .row{
+    width: 100%;
+}
+
 .room_info{
     background-color: rgba(100,100,100,0.8);
     padding: 20px 0px;
@@ -62,7 +70,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
+
+
 
 .room_intro{
     padding: 100px 0px;
@@ -85,6 +96,9 @@ body{
 
 .about{
     padding: 100px 0px;
+}
+.about .row{
+    width: 100%;
 }
 
 .about_thumb{
@@ -116,8 +130,10 @@ body{
 
 .easy_reserve{
     padding: 100px 50px;
+    margin: 50px 100px;
     text-align: center;
     background-color: #ffffff;
+
 }
 .easy_reserve h1{
     margin-bottom: 40px;

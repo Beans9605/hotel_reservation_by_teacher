@@ -17,35 +17,51 @@
         <h1>HOTEL TEACHER'S ROOM</h1>
     </div>
     <div class="room_img_grid">
-        <div class="row">
+        <div class="row m-0">
             <div class="room_img col-6 p-0">
                 <div class="room_info">
                     <span>from $200/night</span>
                     <h3>room</h3>
-                    <a href="#">book now</a>
+                    {% if request.session.user %}
+                    <a href="{% url 'reservation' %}">book now</a>
+                    {% else %}
+                    <a href="{% url 'sign_in' %}">book now</a>
+                    {% endif %}
                 </div>
             </div>
             <div class="room_img col-6 p-0">
                 <div class="room_info">
                     <span>from $200/night</span>
                     <h3>room</h3>
-                    <a href="#">book now</a>
+                    {% if request.session.user %}
+                    <a href="{% url 'reservation' %}">book now</a>
+                    {% else %}
+                    <a href="{% url 'sign_in' %}">book now</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row m-0">
             <div class="room_img col-6 p-0">
                 <div class="room_info">
                     <span>from $200/night</span>
                     <h3>room</h3>
-                    <a href="#">book now</a>
+                    {% if request.session.user %}
+                    <a href="{% url 'reservation' %}">book now</a>
+                    {% else %}
+                    <a href="{% url 'sign_in' %}">book now</a>
+                    {% endif %}
                 </div>
             </div>
             <div class="room_img col-6 p-0">
                 <div class="room_info">
                     <span>from $200/night</span>
                     <h3>room</h3>
-                    <a href="#">book now</a>
+                    {% if request.session.user %}
+                    <a href="{% url 'reservation' %}">book now</a>
+                    {% else %}
+                    <a href="{% url 'sign_in' %}">book now</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -80,7 +96,7 @@
 {% if request.session.user %}
 <div class="easy_reserve">
     <h1>EASY BOOKING</h1>
-    <form class="book_now">
+    <form class="book_now" action="{% url 'reservation' %}" method="POST">
         <span id="checkin" class ="date_box">
             <p>Check In</p>
             <input type="date">

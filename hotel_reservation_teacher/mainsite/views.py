@@ -12,3 +12,6 @@ def home(request):
         return render(request, "mainsite/home.html", {"success": "성공적으로 예약했습니다."})
     else :
         return render(request, "mainsite/home.html")
+
+def about(request):
+    return render(request, "about/about.html")
