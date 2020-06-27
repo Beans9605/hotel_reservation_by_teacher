@@ -2,20 +2,33 @@ body{
     background-color: #ebe9e9;
 }
 
-.img_box{
+/* .img_box{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     width: 100%;
-    text-align: center;
-    background-image: url("../img/hotel.jpg");
+    text-align: center; */
+    /* background-image: url("../img/bradcam.png");
+    background-position: center;
+    background-size: cover; */
+/* } */
+
+.imgmove{
+    width: 100%;
+    height: 500px;
+    background-image: url("../img/bradcam.png");
+    background-position: center center;
+    background-size: cover;
 }
+
 .welcome{
+    position: absolute;
+    top: 170px;
+    text-align: center;
     width: 100%;
     padding: 30px 0px;
     color: #ffffff;
-    background-color: rgba(0,0,0,0.4);
 }
 
 .welcome_title{
@@ -29,14 +42,66 @@ body{
 .welcome_desc{
     font-size: 200%;
 }
+.room_img_grid{
+    height: 500px;
+}
+
+.room_info{
+    background-color: rgba(100,100,100,0.8);
+    padding: 20px 0px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.room_img{
+    color:#ffffff;
+    height: 250px;
+    background-image: url("../img/room1.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .room_intro{
-    padding: 50px 0px;
+    padding: 100px 0px;
     text-align: center;
 }
 
 .intro_title{
     margin: 50px auto;
+}
+
+.text{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.text_box{
+    width: 90%;
+}
+
+.about{
+    padding: 100px 0px;
+}
+
+.about_thumb{
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
+
+.img_1{
+    margin: 0 10px;
+    align-self: flex-start;
+}
+
+
+.img_2{
+    margin: 0 10px;
+    align-self: flex-end;
 }
 
 .rooms_box{

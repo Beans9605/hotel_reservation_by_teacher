@@ -1,0 +1,61 @@
+{% extends 'layout/layout.html' %}
+{% load static %}
+{% block content1 %}
+<div class="img_box">
+    <div class="imgmove"></div>
+    <div class="welcome">    
+        <div class="welcome_title"></div>
+        <div class="welcome_name">ABOUT US</div>
+        <div class="welcome_desc">information of us</div>
+    </div>
+</div>
+<div class="about">
+    <div class="row">
+        <div class="text col-5">
+            <div class="text_box">
+                <span>about us</span>
+                <h2>A Luxuries Hotel with Nature</h2>
+                <p>Suscipit libero pretium nullam potenti. Interdum, 
+                    blandit phasellus consectetuer dolor ornare dapibus enim ut 
+                    tincidunt rhoncus tellus sollicitudin pede nam maecenas,
+                    dolor sem. Neque sollicitudin enim. Dapibus lorem feugiat
+                    facilisi faucibus et. Rhoncus.</p>
+            </div>
+        </div>
+        <div class="col-7">
+            <div class="about_thumb d-flex">
+                <div class="img_1">
+                    <img src="{%static 'img/about/about_1.png'%}" alt="">
+                </div>
+                <div class="img_2">
+                    <img src="{%static 'img/about/about_2.png'%}" alt="">
+                </div>
+            </div>
+        </div>   
+    </div>
+</div>
+
+<div class="">
+    <div class="gallary row">
+        <div class="col-4 p-0">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+    </div>
+</div>
+{% endblock %}

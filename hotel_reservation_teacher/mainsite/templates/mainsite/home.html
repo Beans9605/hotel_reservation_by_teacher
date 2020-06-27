@@ -2,6 +2,7 @@
 {% load static %}
 {% block content1 %}
 <div class="img_box">
+    <div class="imgmove"></div>
     <div class="welcome">    
         <div class="welcome_title">WELCOME TO</div>
         <div class="welcome_name">HOTEL TEACHER</div>
@@ -12,25 +13,68 @@
     <div class="intro_title">
         <h1>HOTEL TEACHER'S ROOM</h1>
     </div>
-        <div class="rooms_box">
-            <div class="room_infos">
-                <img src="{% static 'img/room1.jpg' %}"/>
-                <div class="room_name"></div>
-                <a href="#" class="check_detail">Check Detail</a>
+    <div class="room_img_grid">
+        <div class="row">
+            <div class="room_img col-6 p-0">
+                <div class="room_info">
+                    <span>from $200/night</span>
+                    <h3>room</h3>
+                    <a href="#">book now</a>
+                </div>
             </div>
-            <div class="room_infos">
-                <img src="{% static 'img/room1.jpg' %}"/>
-                <div class="room_name"></div>
-                <a href="#" class="check_detail">Check Detail</a>
-            </div>
-            <div class="room_infos">
-                <img src="{% static 'img/room1.jpg' %}"/>
-                <div class="room_name"></div>
-                <a href="#" class="check_detail">Check Detail</a>
+            <div class="room_img col-6 p-0">
+                <div class="room_info">
+                    <span>from $200/night</span>
+                    <h3>room</h3>
+                    <a href="#">book now</a>
+                </div>
             </div>
         </div>
-    
+        <div class="row">
+            <div class="room_img col-6 p-0">
+                <div class="room_info">
+                    <span>from $200/night</span>
+                    <h3>room</h3>
+                    <a href="#">book now</a>
+                </div>
+            </div>
+            <div class="room_img col-6 p-0">
+                <div class="room_info">
+                    <span>from $200/night</span>
+                    <h3>room</h3>
+                    <a href="#">book now</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<div class="about">
+    <div class="row">
+        <div class="text col-5 p-0">
+            <div class="text_box">
+                <span>about us</span>
+                <h2>A Luxuries Hotel with Nature</h2>
+                <p>Suscipit libero pretium nullam potenti. Interdum, 
+                    blandit phasellus consectetuer dolor ornare dapibus enim ut 
+                    tincidunt rhoncus tellus sollicitudin pede nam maecenas,
+                    dolor sem. Neque sollicitudin enim. Dapibus lorem feugiat
+                    facilisi faucibus et. Rhoncus.</p>
+                <a href="{% url 'about' %}" class="line-button">Learn More</a>
+            </div>
+        </div>
+        <div class="col-7 p-0">
+            <div class="about_thumb d-flex">
+                <div class="img_1">
+                    <img src="{%static 'img/about/about_1.png'%}" alt="">
+                </div>
+                <div class="img_2">
+                    <img src="{%static 'img/about/about_2.png'%}" alt="">
+                </div>
+            </div>
+        </div>   
+    </div>
+</div>
+{% if request.session.user %}
 <div class="easy_reserve">
     <h1>EASY BOOKING</h1>
     <form class="book_now">
@@ -55,6 +99,7 @@
         </span>
     </form>
 </div>
+{% endif %}
 <div class="">
 
 </div>
