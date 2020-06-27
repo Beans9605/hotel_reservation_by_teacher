@@ -1,6 +1,9 @@
 {% extends 'layout/layout.html' %}
 {% load static %}
 {% block content1 %}
+{% if success %}
+<div class='alert alert-primary' role='alert'>{{success}}</div>
+{% endif %}
 <div class="img_box">
     <div class="welcome">    
         <div class="welcome_title">WELCOME TO</div>

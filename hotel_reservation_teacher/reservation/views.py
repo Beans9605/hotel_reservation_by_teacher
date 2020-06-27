@@ -26,11 +26,14 @@ class ReservationBaseAlgorithm :
         return False
 
     # 예약 수정해주는 함수
-    def modify_reservation (self, room) :
-        if self.selected_room_is_empty(room) is True :
-            return room
-        else :
-            return False
+    def modify_reservation (self, room, reservation) :
+        reservation.room = room
+        reservation.start_day = self.start_day
+        reservation.end_day = self.end_day
+        reservation.users_num = self.people
+        reservation.night_num = self.night_num
+        reservation.save()
+        return reservation
 
     # 예약 저장 함수
     def save_reservation(self, room, user) :
@@ -110,6 +113,7 @@ def reservation (request) :
         else :
             # 예약 저장하는 함수
             reservation_class.save_reservation(empty_room_find, user)
+            request.session['reservation'] = 'success'
         
         return redirect("home")
     elif request.session.get('user') is None  :
@@ -117,3 +121,42 @@ def reservation (request) :
     else :
         return render(request, "reservation/reservation.html")
 
+
+def reservation_modify(request, pk) :
+    reservation = get_object_or_404(Reservation, pk=pk)
+    if request.session.get('user') == reservation.user.username and request.method == "POST" :
+        room = reservation.room
+        start_day = request.POST['start_day']
+        end_day = request.POST['end_day']
+        people = int(request.POST['adult']) + int(request.POST['child'])
+
+        start_day = datetime.strptime(start_day, "%Y-%m-%d")
+        end_day = datetime.strptime(end_day, '%Y-%m-%d')
+
+        night_num = int((end_day-start_day).days) - 1
+
+        reservation_al = ReservationBaseAlgorithm(start_day, end_day, night_num, people)
+
+        if reservation_al.selected_room_is_empty(room) is True :
+            modify_reservation = reservation_al.modify_reservation(room, reservation)
+            request.session['modify_reservation'] = modify_reservation.room.name
+            redirect("home")
+        elif reservation_al.selected_room_is_empty(room) is None :
+            errMsg = "해당 날에는 남는 방에 존재하지 않습니다."
+            return render(request, 'reservation/reservation_modify.html', errMsg)
+        else :
+            errMsg = "남는 방은 있으나 선택한 방은 해당 날짜에 모두 꽉 차있습니다."
+            return render(request, 'reservation/reservation_modify.html', errMsg)
+    elif request.session.get('user') is None :
+        return redirect('home')
+    else :
+        return render(request, 'reservation/reservation_modify.html')
+
+def reservation_check (request) :
+    if request.session.get('user') is not None :
+        user = get_object_or_404(CustomUser, username=request.session['user'])
+        reservations = Reservation.objects.filter(user=user)
+        context = {'user' : user, 'reservations':reservations}
+        return render(request, 'reservation/checkroom.html', context)
+    else :
+        return redirect('home')
