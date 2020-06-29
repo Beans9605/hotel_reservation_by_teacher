@@ -1,8 +1,10 @@
 window.addEventListener('scroll',function(){
     const img = document.querySelector('.imgmove')
+    if (img){
+        img.style.transform = `translateY(-${nowscroll/4}px)`
+    }
     let nowscroll = document.children[0].scrollTop
     nowscroll = Math.floor(nowscroll)
-    img.style.transform = `translateY(-${nowscroll/4}px)`
     navbar(nowscroll)
     function navbar(scroll){
         const nav = document.querySelector('.navbar')

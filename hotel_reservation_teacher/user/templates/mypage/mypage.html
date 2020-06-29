@@ -1,4 +1,49 @@
 {% extends 'layout/layout.html' %}
 {% load static %}
 {% block content1 %}
+<div class="mypage">
+    <div class="my_info">
+        <div class="face_img_box">
+            <img src="{%static 'img/room1.jpg'%}" alt="">
+            <a href="#">modify picture</a>
+        </div>
+        <div class="user_info">
+            <div class="user_name">name : MaJaeHoon </div>
+            <div class="user_rating">rating : GOLD</div>
+        </div>
+
+        <div class="reservation_record">
+            <div class="now_reserved">
+                <h3>Current Reservations</h3>
+                <div>1</div>
+            </div>
+            <div class="past_reserved">
+                <h3>Past Reservations</h3>
+                <div>50</div>
+            </div>
+        </div>
+    </div>
+    <div class="reservations">
+        <div class="reservation_check">
+            <div class="room_img_box">
+                <div class="reserve_room_img"><img src="{%static 'img/room1.jpg'%}" alt="reserve_room_img"></div>
+            </div>
+            <div class="reserve_room_info">
+                <h3>delux room</h3>
+                <div class="roomnum">room number : 1003</div>
+                <div class="check_in_time">Check In : 20200610 13:00</div>
+                <div class="check_out_time">Check Out : 20200617 10:00</div>
+                <div class="adult">adult : 5</div>
+                <div class="child">child : 5</div>
+            </div>
+            <div class="more dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">modify reservation</a>
+                  <a class="dropdown-item" href="#">cancel reservation</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

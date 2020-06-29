@@ -1,0 +1,66 @@
+.mypage{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+}
+.my_info{
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 90%;
+    border-radius: 25px;
+    background-color: #ffffff;
+}
+.user_info{
+    margin-top: 30px;
+    text-align: center;
+}
+.reservation_record{
+    margin-top: 30px;
+    text-align: center;
+}
+.face_img_box{
+    margin: 15px auto;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+.face_img_box img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.reservations{
+    margin: 0 auto;
+    margin-top: 30px;
+    max-height: 1000px;
+    width: 90%;
+}
+
+.reservation_check{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+.room_img_box{
+    padding: 30px;
+}
+
+.reserve_room_img{
+    width: 150px;
+    height: 150px;
+}
+
+.reserve_room_img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.reserve_room_info{
+    padding: 0px 20px 0px 0px ;
+}
+.more{
+    padding: 10px;
+}
